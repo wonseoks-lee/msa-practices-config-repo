@@ -1,0 +1,36 @@
+#
+# default configuration
+#
+
+spring:
+   devtools:
+      livereload:
+         enabled: true
+   datasource:
+      driver-class-name: org.mariadb.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/webdb?characterEncoding=utf8
+      username: webdb
+      password: '{cipher}AQBpa7g+7hvOyYCR9BrLnlwuKcjEp5PC1qiymQb3hHEBqhkqddfpVRUSfIkppT3hyHEE25+M9KuUQR/tREHbZTtOISWCBefHaIWb/3EwtM5crNAtsieG+B+s6czcCUTiPJBcIlXrH/ema2M1AgXpgQUhczU1fYK+d/4p2RU7IQA/r8msYN2JH8XmI/yqbkl8Q8V/M/cLBS9NPSaHlBx3g9MeznwnFzXEAJtVHtqIEIyJHzC6A7PILkTOZivOkyKA/I0vcaESf9ptnOFGSKMqPWRu2eloueYrIwS3FIVFj5gbEAMFBOsAdhx+DUGdMibnNvDCdsxkWRR4ELoh9GREykr7VuK4FljfgIoWs52+RPUADPfcuXoU6QS98yMIbO6PH3M='         
+mybatis:
+   config-location: classpath:mybatis/configuration.xml
+server:
+   port: 0
+   servlet:
+      context-path: /
+      encoding:
+         charset: UTF-8
+         enabled: true
+eureka:
+   instance:
+      preferIpAddress: true
+   client:
+      fetchRegistry: true
+      registerWithEureka: true
+      serviceUrl:
+         defaultZone: http://localhost:8761/eureka
+logging:
+   pattern:
+      console: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{5} - %msg%n"
+   level:
+      root: INFO
+   
